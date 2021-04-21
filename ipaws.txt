@@ -1,0 +1,6 @@
+[webserver]
+3.80.122.127 ansible_ssh_user=ec2-user
+54.160.248.163 ansible_ssh_user=ec2-user
+
+[haproxy]
+34.227.58.39 ansible_ssh_user=ec2-user
