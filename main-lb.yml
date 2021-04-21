@@ -1,0 +1,15 @@
+#this file is for mylb 
+- name: Installing haproxy
+  package:
+         name: "haproxy"
+         state: present
+
+- name: Configuring HAProxy
+  template:
+         dest: "/etc/haproxy/haproxy.cfg"
+         src: "/etc/haproxy/haproxy.cfg"
+
+- name: "starting haproxy services on ip {{ ansible_facts['default_ipv4']['address'] }}:80"
+  service:
+         name: "haproxy"
+         state: restarted
